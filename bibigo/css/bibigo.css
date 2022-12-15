@@ -1,0 +1,694 @@
+* {
+  outline: 1px solid #f00;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body {
+  position: relative;
+}
+/* header */
+header {
+  position: relative;
+  line-height: 80px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+header .logo img {
+  width: 100%;
+}
+header.on {
+  background-color: #f3f3f3;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header ul {
+  display: flex;
+  gap: 100px;
+}
+ul li {
+  position: relative;
+  z-index: 5;
+}
+ul > li:hover .submenu {
+  display: block;
+  text-align: center;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: 2px solid #72af2c;
+  width: 200px;
+}
+.submenu::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid #72af2c;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.submenu a {
+  display: inline-block;
+}
+
+header .icon i {
+  font-size: 23px;
+  cursor: pointer;
+}
+header .icon i:last-child {
+  padding-left: 20px;
+}
+header .icon ul {
+  gap: 30px;
+}
+
+.icon .submenu {
+  width: 100px;
+}
+
+/* search */
+#searchBar {
+  display: none;
+}
+.search {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f3f3f3;
+  z-index: 6;
+}
+.search .container {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.search form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.search #searchBlank {
+  width: 90%;
+  height: 50px;
+  border: none;
+  background-color: #fff;
+  padding: 0 30px;
+}
+
+.search #searchIcon {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #72af2c;
+  background-image: url(../img/search_icon.png);
+  background-size: 50px 50px;
+  vertical-align: middle;
+}
+.search i {
+  cursor: pointer;
+  font-size: 30px;
+}
+.searchBg {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 5;
+}
+/* mainVisual */
+
+.mainVisual {
+  position: relative;
+}
+.mainVisual .container {
+  padding: 60px 0 160px 0;
+}
+.mainVisual .topic h2 {
+  font-size: 79px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 30px 0;
+}
+.mainVisual span {
+  display: block;
+}
+
+.mainVisual .topic p {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #292929;
+  margin-bottom: -50px;
+}
+
+.mainVisual .bibigo-logo {
+  position: absolute;
+  right: 30%;
+  z-index: 4;
+  transform: translateY(500px);
+  opacity: 0;
+  -webkit-animation: topmove 2s both;
+  animation: topmove 2s both;
+}
+
+@-webkit-keyframes topmove {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 2s;
+  }
+}
+
+@keyframes topmove {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 2s;
+  }
+}
+
+.mainVisual .source {
+  position: absolute;
+  width: 30%;
+  transform: rotate(-20deg);
+  z-index: 3;
+}
+.mainVisual .bibigoImg {
+  width: 80%;
+  transform: rotate(-20deg);
+  margin-left: 250px;
+}
+/* scroll */
+.mainVisual .scrollUp {
+  color: #fff;
+  background-color: #72af2c;
+  padding: 15px 30px 17px 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.scrollUp.on {
+  padding: 0;
+  position: fixed;
+
+  left: 100%;
+  transform: translateX(-100%);
+
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+}
+/* mainGive */
+.mainGive {
+  padding: 100px 0;
+  background: url(../img/main_give.jpg) no-repeat center center/cover;
+}
+
+.mainGive .giveGoal {
+  padding-top: 370px;
+  text-align: right;
+  margin: 0 0 0 auto;
+}
+
+.mainGive .giveGoal h2 {
+  font-size: 41px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 30px 0;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.mainGive .giveGoal p {
+  font-size: 19px;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 0px 0px #000;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.mainGive .giveGoal p:nth-of-type(1) {
+  margin: 0 0 20px 0;
+}
+.mainGive .giveGoal span {
+  font-size: 17px;
+  color: #fff;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+/* main-health*/
+
+.main-health {
+  padding: 100px 0;
+}
+.main-health .container {
+  display: flex;
+}
+
+.main-health .container h2:nth-of-type(1) {
+  color: #000;
+  font-size: 37px;
+  font-weight: 500;
+  margin: 0 15px 0 0;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
+  text-orientation: upright;
+  word-spacing: -20px;
+}
+
+.main-health .container h2:nth-of-type(2) {
+  color: #000;
+  font-size: 37px;
+  font-weight: 500;
+  margin: 0 25px 0 0;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
+  text-orientation: upright;
+  padding-top: 60px;
+  word-spacing: -20px;
+}
+
+.main-health .fish {
+  font-size: 21px;
+  font-weight: 300px;
+  line-height: 1.6em;
+  margin: 0 0 0 auto;
+  text-align: right;
+  letter-spacing: -0.025em;
+}
+
+.main-health .fish p:nth-of-type(1) {
+  margin: 0 0 40px 0;
+}
+
+.main-health .fish p:nth-of-type(2) {
+  margin: 0 0 28px 0;
+}
+
+/* brand-symbol*/
+.brand-symbol {
+  padding: 100px 0;
+}
+.brand-symbol .container {
+  display: flex;
+}
+.brand-symbol .content {
+  letter-spacing: -0.04em;
+}
+
+.brand-symbol .content h2 {
+  font-size: 31px;
+  font-weight: 700;
+  margin: 0 0 45px 0;
+}
+
+.brand-symbol .content h3 {
+  font-size: 31px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.brand-symbol .content p {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0 0 20px 0;
+}
+
+.brand-symbol .content {
+  width: 56%;
+}
+
+.symbol-img {
+  position: relative;
+}
+
+.green-box {
+  width: 100%;
+  height: 190px;
+  background: linear-gradient(135deg, transparent 60px, #72af2c 0);
+}
+
+.brand-symbol .bibim {
+  margin: 0 0 0 auto;
+}
+
+.brand-symbol .symbol-img {
+  position: relative;
+}
+
+.brand-symbol .symbol-img .logo {
+  width: 40%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.brand-symbol .symbol-img .full {
+  width: 35%;
+  position: absolute;
+  top: 220px;
+  left: 80px;
+}
+
+.brand-symbol .symbol-img .emty {
+  width: 35%;
+  position: absolute;
+  top: 220px;
+  right: 80px;
+}
+
+.brand-symbol .green-box {
+  margin-top: 344px;
+}
+/* video */
+.video {
+  padding: 100px 0;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.video h2 {
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.video .top span {
+  display: inline-block;
+  padding: 10px 20px 14px 20px;
+  background-color: #72af2c;
+  font-size: 17px;
+  color: #fff;
+}
+.top span i {
+  padding-left: 10px;
+}
+.video .slider img {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.video .slider figure {
+  position: relative;
+  cursor: g;
+}
+.video .slider figure .playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.video .slider figure .playBtn i {
+  font-size: 80px;
+  color: #72af2c;
+  transform: rotate(90deg);
+}
+.video .slider figure .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 998;
+}
+
+/* footer */
+footer {
+  padding: 50px 0;
+  border-top: 1px solid #ddd;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .list ul {
+  display: flex;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #313131;
+}
+footer .list > ul li#redFont {
+  color: #f00;
+}
+/* footer .list ul li ~ li {
+  padding: 0 10px;
+} */
+footer .list ul li ~ li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background-color: #ddd;
+  margin: 0 15px;
+}
+footer .company ul {
+  display: flex;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #313131;
+}
+footer .company ul li ~ li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+footer p {
+  font-size: 13px;
+}
+
+footer .right .select {
+  margin-bottom: 20px;
+  text-align: right;
+}
+footer .right .select #select {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+footer .right .sns {
+  margin-bottom: 20px;
+  text-align: right;
+}
+footer .right .sns i {
+  font-size: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 50%;
+}
+footer .right .sns i ~ i {
+  margin: 0 2px;
+}
+footer .right .symbol {
+  display: flex;
+  gap: 10px;
+}
+
+/* 테스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 50px;
+  }
+  header ul {
+    gap: 50px;
+  }
+  .mainVisual .container {
+    padding: 60px 50px 160px 50px;
+  }
+  .mainVisual .source {
+    position: absolute;
+    top: 40%;
+    left: 75px;
+    width: 25%;
+  }
+  .mainVisual .bibigoImg {
+    margin-top: 50px;
+    width: 70%;
+  }
+  .mainVisual .topic h2 {
+    font-size: 60px;
+  }
+
+  .mainVisual .topic p {
+    font-size: 21px;
+  }
+  .mainGive .giveGoal h2 {
+    font-size: 35px;
+  }
+
+  .mainGive .giveGoal p {
+    font-size: 17px;
+  }
+  .mainGive {
+    background: url(../img/main_give.jpg) no-repeat center center/cover;
+    background-position: 40% 70%;
+  }
+  .main-health .fish {
+    font-size: 19px;
+    width: 289px;
+  }
+  .main-health figure img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .main-health figure .menu {
+    margin-right: 10px;
+  }
+
+  .brand-symbol .symbol-img .logo {
+    top: -10px;
+  }
+  .brand-symbol .symbol-img .full {
+    left: 50px;
+  }
+
+  .brand-symbol .symbol-img .emty {
+    right: 50px;
+  }
+  .brand-symbol .bibim {
+    width: 40%;
+  }
+  .brand-symbol .green-box {
+    width: 179%;
+  }
+  footer .left .list ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .left .list ul li {
+    margin: 5px 0;
+  }
+}
+/* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
+@media (max-width: 991px) {
+  header {
+    line-height: 60px;
+  }
+  header ul {
+    font-size: 12px;
+    gap: 30px;
+  }
+  header .logo img {
+    width: 70%;
+  }
+  header .icon i {
+    font-size: 17px;
+  }
+  .mainVisual .container {
+    padding: 60px 50px 80px 50px;
+  }
+  .mainVisual .bibigoImg {
+    margin-top: 70px;
+    width: 60%;
+  }
+  .mainVisual .bibigo-logo {
+    width: 20%;
+    transform: translateY(500px);
+  }
+  .mainGive {
+    padding: 50px 0;
+  }
+  .mainGive .giveGoal {
+    padding-top: 200px;
+  }
+  .main-health .container h2:nth-of-type(1) {
+    font-size: 30px;
+  }
+
+  .main-health .container h2:nth-of-type(2) {
+    font-size: 30px;
+  }
+  .main-health {
+    padding: 50px 0;
+  }
+
+  .main-health .fish {
+    font-size: 17px;
+  }
+
+  .main-health .fish p:nth-of-type(1) {
+    margin: 0 0 40px 0;
+  }
+
+  .main-health .fish p:nth-of-type(2) {
+    margin: 0 0 28px 0;
+  }
+  .brand-symbol {
+    padding: 50px 0;
+  }
+  .brand-symbol .green-box {
+    width: 179%;
+    height: 100px;
+    background: linear-gradient(135deg, transparent 30px, #72af2c 0);
+    margin-top: 250px;
+  }
+  .brand-symbol .symbol-img .full {
+    top: 130px;
+  }
+
+  .brand-symbol .symbol-img .emty {
+    top: 130px;
+  }
+  .video {
+    padding: 50px 0;
+  }
+  .top {
+    margin-bottom: 50px;
+  }
+  .video .slider img {
+    margin: 0 auto;
+    width: 50%;
+  }
+  footer .left {
+    margin-right: 20px;
+  }
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
+@media (max-width: 767px) {
+}
+/* 기본 CSS를 작성합니다. 
+기본으로 작성되는 CSS는 1199px보다 큰 화면에서 작동 됩니다.
+ 세로모드 모바일 디바이스 (가로 해상도가 576px 보다 작은 화면에 적용)  */
+@media (max-width: 575px) {
+}
