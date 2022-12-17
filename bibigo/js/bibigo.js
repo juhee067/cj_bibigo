@@ -50,3 +50,13 @@ rpClose.addEventListener("click", function () {
   SCBtn.style.display = "block";
   rpClose.style.display = "none";
 });
+
+$(function () {
+  $(".gnb>.submenu>li>a").on("click", function (e) {
+    if ($(".gnb").hasClass("on")) {
+      e.preventDefault();
+      $(".submenu").slideUp();
+      $(this).next().stop().slideToggle();
+    }
+  });
+});
