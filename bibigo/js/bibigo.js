@@ -32,3 +32,21 @@ window.addEventListener("scroll", function () {
   }
   console.log(scrollItem.className);
 });
+
+// rpMenu
+let MbMenu = document.querySelector(".MbMenu");
+let rpMenu = document.querySelector(".rpMenu");
+let rpClose = document.querySelector("#rpClose");
+let SCBtn = document.querySelector("#SCBtn");
+MbMenu.addEventListener("click", function () {
+  rpMenu.style.display = "block";
+  MbMenu.style.display = "none";
+  SCBtn.style.display = "none";
+  rpClose.style.display = "block";
+});
+rpClose.addEventListener("click", function () {
+  rpMenu.style.display = "none";
+  MbMenu.style.display = "block";
+  SCBtn.style.display = "block";
+  rpClose.style.display = "none";
+});

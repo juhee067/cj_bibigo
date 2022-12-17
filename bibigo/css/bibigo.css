@@ -85,6 +85,30 @@ header .icon ul {
 .MbMenu {
   display: none;
 }
+/* max-width: 767px 이하*/
+.rpMenu{
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: left;
+  background-color: #fff;
+  z-index: 7;
+}
+.rpMenu .smenu{
+ line-height: 3;
+ border-bottom: 1px solid #ddd;
+}
+.rpMenu .login{
+display: flex;
+line-height: 2.5;
+}
+.rpMenu .login li{
+  position: relative;
+width: 50%;
+
+}
+
 
 /* search */
 #searchBar {
@@ -703,6 +727,28 @@ footer .right .symbol {
   .MbMenu {
     display: block;
   }
+  #rpClose{
+    display: none;
+  }
+  .login{
+    text-align: center;
+  }
+
+  .submenu {
+    position: static;
+    transform: translateX(0);
+    width: 100%;
+    font-size: 13px;
+    border: none;
+  }
+  .submenu li{
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  .submenu::before {
+    content: "";
+    content: none;
+  }
   .mainVisual .container {
     padding: 30px 50px 130px 50px;
   }
@@ -870,9 +916,6 @@ footer .right .symbol {
     width: 70%;
   }
 
-  /* .main-health .container {
-    flex-wrap: wrap;
-  } */
   .main-health .fish {
     font-size: 15px;
   }
