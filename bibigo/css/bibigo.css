@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 1px solid #f00;
-}
+} */
 * {
   box-sizing: border-box;
 }
@@ -870,6 +870,9 @@ footer .right .symbol {
     width: 70%;
   }
 
+  /* .main-health .container {
+    flex-wrap: wrap;
+  } */
   .main-health .fish {
     font-size: 15px;
   }
