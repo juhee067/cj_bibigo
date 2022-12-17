@@ -86,7 +86,7 @@ header .icon ul {
   display: none;
 }
 /* max-width: 767px 이하*/
-.rpMenu{
+.rpMenu {
   display: none;
   position: absolute;
   left: 0;
@@ -95,20 +95,21 @@ header .icon ul {
   background-color: #fff;
   z-index: 7;
 }
-.rpMenu .smenu{
- line-height: 3;
- border-bottom: 1px solid #ddd;
+.rpMenu .smenu {
+  line-height: 3;
+  border-bottom: 1px solid #ddd;
+  padding-left: 50px;
 }
-.rpMenu .login{
-display: flex;
-line-height: 2.5;
+.rpMenu .login {
+  display: flex;
+  line-height: 2.5;
+  background-color: #72af2c1f;
+  color: #72af2c;
 }
-.rpMenu .login li{
+.rpMenu .login li {
   position: relative;
-width: 50%;
-
+  width: 50%;
 }
-
 
 /* search */
 #searchBar {
@@ -727,10 +728,10 @@ footer .right .symbol {
   .MbMenu {
     display: block;
   }
-  #rpClose{
+  #rpClose {
     display: none;
   }
-  .login{
+  .login {
     text-align: center;
   }
 
@@ -741,8 +742,10 @@ footer .right .symbol {
     font-size: 13px;
     border: none;
   }
-  .submenu li{
+  .submenu li {
     text-align: left;
+  }
+  .submenu li:not(:last-of-type) {
     border-bottom: 1px solid #ddd;
   }
   .submenu::before {
@@ -951,6 +954,125 @@ footer .right .symbol {
 
   .brand-symbol .content {
     width: 56%;
+  }
+
+  .brand-symbol .green-box {
+    width: 179%;
+    height: 50px;
+    background: linear-gradient(135deg, transparent 20px, #72af2c 0);
+    margin-top: 180px;
+  }
+  .brand-symbol .symbol-img .full {
+    top: 90px;
+    left: 20px;
+  }
+
+  .brand-symbol .symbol-img .emty {
+    top: 90px;
+    right: 20px;
+  }
+  .top {
+    margin-bottom: 30px;
+  }
+
+  .video h2 {
+    font-size: 21px;
+  }
+
+  .video .top span {
+    padding: 5px 15px 9px 15px;
+    font-size: 13px;
+  }
+  .top span i {
+    padding-left: 10px;
+  }
+
+  .video .slider figure .playBtn i {
+    font-size: 60px;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .mainVisual .container {
+    padding: 30px 30px 80px 30px;
+  }
+  .mainVisual .topic h2 {
+    font-size: 40px;
+  }
+
+  .mainVisual .topic p span {
+    width: 75%;
+  }
+
+  .mainVisual .bibigoImg {
+    margin-left: 100px;
+    rotate: 10deg;
+  }
+  .mainVisual .source {
+    top: 60%;
+    left: 60px;
+  }
+  .mainVisual .bibigo-logo {
+    display: none;
+  }
+
+  .mainGive .giveGoal {
+    padding-top: 70px;
+  }
+
+  .mainGive .giveGoal {
+    width: 70%;
+  }
+
+  .main-health .fish {
+    font-size: 15px;
+  }
+
+  .main-health .fish p:nth-of-type(1) {
+    margin: 0 0 30px 0;
+  }
+
+  .main-health .fish p:nth-of-type(2) {
+    margin: 0 0 28px 0;
+  }
+
+  .main-health .MbSub {
+    display: block;
+  }
+  .main-health .menu {
+    display: none;
+  }
+  .main-health .jun {
+    display: block;
+  }
+  /*  */
+  .main-health .fish figure {
+    display: none;
+  }
+  .brand-symbol .bibim {
+    display: none;
+  }
+
+  .brand-symbol .content h2 {
+    font-size: 21px;
+    margin: 0 0 25px 0;
+  }
+
+  .brand-symbol .content h3 {
+    font-size: 21px;
+  }
+
+  .brand-symbol .content p {
+    font-size: 15px;
+  }
+  /*  */
+  .brand-symbol .content {
+    width: 100%;
   }
 
   .brand-symbol .green-box {
